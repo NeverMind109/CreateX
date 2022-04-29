@@ -1,0 +1,12 @@
+.header {
+  padding: 23px 0;
+  &__container {
+    @include flex-v-center;
+  }
+  &--main {
+    background-color: var(--color-light);
+  }
+  &__nav {
+    margin: 0 auto 0 60px;
+  }
+}
