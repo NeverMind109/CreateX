@@ -1,0 +1,33 @@
+.form-field {
+  @include flex-column-start;
+  &__caption {
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-gray);
+    margin-bottom: 7px;
+  }
+  &__input {
+    width: 260px;
+    height: 44px;
+    border: 1px solid #d7dadd;
+    border-radius: 4px;
+    background: #f4f5f7;
+    padding: 0 15px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #9a9ca5;
+    &::placeholder {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: #9a9ca5;
+    }
+  }
+  &--big {
+    flex-grow: 1;
+    .form-field__input {
+      width: 100%;
+    }
+  }
+}
