@@ -1,0 +1,11 @@
+.learn-more {
+  @include flex-all-center;
+  &__subtitle {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    color: var(--color-ebony);
+    margin: 0;
+    margin-right: 40px;
+  }
+}
