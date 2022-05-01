@@ -37,9 +37,10 @@
       <label class="form-field form-field--gray contacts-form__field">
         <span class="form-field__caption">Message*</span>
         <textarea
-          class="form-field__input contacts-form__input--big"
+          class="form-field__input form-field__input--big"
           name="message"
           placeholder="Your message"
+          required
         ></textarea>
       </label>
       <label class="custom-checkbox contacts-form__checkbox">
@@ -50,7 +51,10 @@
         >
       </label>
       <div class="centered">
-        <button class="contacts-form__btn btn btn--fill" type="submit">
+        <button
+          class="contacts-form__btn btn-reset btn btn--fill"
+          type="submit"
+        >
           send request
         </button>
       </div>
