@@ -5,6 +5,7 @@ const portSlider = document.querySelector(".portfolio-section__items");
 
 import Swiper, { Navigation, Pagination } from "swiper";
 Swiper.use([Navigation, Pagination]);
+
 const portfolioSlider = new Swiper(portSlider, {
   slidesPerView: 3,
   spaceBetween: gap,
@@ -55,3 +56,13 @@ document
       activeSlide.nextElementSibling.classList.add("slider-visible");
     }
   });
+
+const testimonialsSlider = new Swiper(".testimonials__items", {
+  slidesPerView: 1,
+  spaceBetween: gap,
+  loop: true,
+  navigation: {
+    nextEl: ".testimonials__next",
+    prevEl: ".testimonials__prev",
+  },
+});
