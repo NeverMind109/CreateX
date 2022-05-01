@@ -108,6 +108,11 @@ a {
   position: relative;
 }
 
+.centered {
+  width: 100%;
+  text-align: center;
+}
+
 .section-offset {
   padding-top: 120px;
 }
@@ -182,5 +187,55 @@ a {
     &-light {
       border-color: var(--color-light);
     }
+  }
+}
+
+.custom-checkbox {
+  &__input {
+    position: absolute;
+    opacity: 0;
+  }
+  &__text {
+    display: inline-block;
+    position: relative;
+    padding-left: 27px;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-gray);
+    &:before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      left: -1px;
+      top: 1px;
+      width: 16px;
+      height: 16px;
+      border: 1px solid var(--color-primary);
+      border-radius: 3px;
+      transition: background-color 0.3s ease-in-out;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: -1px;
+      top: 1px;
+      width: 16px;
+      height: 16px;
+      background-image: url("../img/check.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 10px 8px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+  &__input:checked + &__text::before {
+    background-color: var(--color-primary);
+  }
+  &__input:checked + &__text::after {
+    opacity: 1;
+  }
+  &__input:focus + &__text {
+    outline: 3px solid var(--color-primary);
   }
 }

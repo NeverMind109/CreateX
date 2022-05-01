@@ -23,11 +23,23 @@
       line-height: 150%;
       color: #9a9ca5;
     }
+    &--big {
+      height: 66px;
+      padding-top: 10px;
+      resize: none;
+    }
   }
   &--big {
     flex-grow: 1;
     .form-field__input {
       width: 100%;
+    }
+  }
+  &--gray {
+    width: 100%;
+    .form-field__input {
+      width: 100%;
+      background-color: #f4f5f7;
     }
   }
 }
