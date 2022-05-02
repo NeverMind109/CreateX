@@ -1,0 +1,28 @@
+.page-hero {
+  padding: 153px 0 179px;
+  background-color: var(--color-athens);
+  background-image: url("../img/services-hero-bg.png");
+  background-position: right -8px top;
+  background-repeat: no-repeat;
+  &__breadcrumbs {
+    margin-bottom: 40px;
+  }
+  &__title {
+    max-width: 600px;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 130%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-ebony);
+    margin: 0;
+    margin-bottom: 24px;
+  }
+  &__description {
+    max-width: 600px;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--color-storm);
+    margin: 0;
+  }
+}

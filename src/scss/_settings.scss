@@ -180,6 +180,7 @@ a {
 }
 
 .btn {
+  display: inline-block;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -197,6 +198,10 @@ a {
   &--stroke {
     &-light {
       border-color: var(--color-light);
+    }
+    &-primary {
+      color: var(--color-primary);
+      border-color: var(--color-primary);
     }
   }
 }

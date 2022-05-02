@@ -6,6 +6,12 @@
   &--main {
     background-color: var(--color-light);
   }
+  &--secondary {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
   &__nav {
     margin: 0 auto 0 60px;
   }
