@@ -20,10 +20,7 @@
     z-index: 5;
   }
   &__item {
-    display: grid;
     align-items: center;
-    grid-template-columns: repeat(12, 1fr);
-    gap: var(--grod-gap);
     &:not(:last-child) {
       margin-bottom: 118px;
     }
@@ -42,6 +39,7 @@
     grid-column: 6 span;
   }
   &__info {
+    align-self: center;
     grid-column: 6 span;
     padding: 20px 0;
     padding-left: 40px;

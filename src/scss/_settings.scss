@@ -179,6 +179,12 @@ a {
   }
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gap);
+}
+
 .btn {
   display: inline-block;
   font-weight: 700;

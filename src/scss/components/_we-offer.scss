@@ -1,0 +1,84 @@
+.we-offer {
+  padding: 120px 0;
+  background-color: var(--color-light);
+  &__image {
+    grid-column: 7 span;
+  }
+  &__content {
+    grid-column: 5 span;
+    padding-left: 75px;
+    padding-top: 5px;
+  }
+  &__title {
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 130%;
+    margin-bottom: 55px;
+  }
+  &__accordion {
+    &:not(:last-of-type) {
+      margin-bottom: 13px;
+    }
+    .accordion {
+      &__control {
+        position: relative;
+        text-align: left;
+        padding: 0 10px 0 44px;
+      }
+      &__title {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 150%;
+        color: var(--color-ebony);
+      }
+      &__icon {
+        position: absolute;
+        left: 1px;
+        top: 10px;
+        display: block;
+        width: 22px;
+        height: 24px;
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100%;
+          height: 2px;
+          border-radius: 100%;
+          background-color: var(--color-primary);
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 0;
+          transform: translateX(-50%);
+          width: 2px;
+          height: 100%;
+          border-radius: 100%;
+          background-color: var(--color-primary);
+          transition: opacity 0.3s;
+        }
+      }
+      &__content {
+        padding: 13px 20px 13px 44px;
+        p {
+          font-size: 16px;
+          line-height: 160%;
+          color: var(--color-storm);
+          margin: 0;
+        }
+      }
+    }
+  }
+  .is-open .accordion__icon {
+    transform: none;
+    &::after {
+      opacity: 0;
+    }
+  }
+}

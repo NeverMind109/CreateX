@@ -22,8 +22,11 @@
 @import "./components/contacts-section";
 @import "./components/footer";
 
-@import "./components/hero-services";
+@import "./components/page-hero";
 @import "./components/services-content";
+
+@import "./components/we-offer";
+@import "./components/how-we-do";
 // подключения маленьких компонентов страницы
 @import "./components/nav";
 @import "./components/header-contacts";

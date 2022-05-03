@@ -1,9 +1,9 @@
 .mission {
   background-color: var(--color-light);
   &__list {
-    --mission-gap: 94px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    --mission-gap: 94px;
     gap: calc(var(--mission-gap) * 2);
     margin-bottom: 27px;
   }
