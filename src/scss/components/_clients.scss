@@ -1,0 +1,12 @@
+.clients {
+  padding: 160px 0 120px;
+  background-color: var(--color-light);
+  &__title {
+    margin-bottom: 60px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    gap: 102px;
+  }
+}
