@@ -122,3 +122,25 @@ if (relatedSlider) {
       }
     });
 }
+
+const workImages = document.querySelector(".work-images-slider");
+
+if (workImages) {
+  const workSliderNav = new Swiper(".work-images-nav", {
+    spaceBetween: 20,
+    slidesPerView: 10,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  const workSlides = new Swiper(workImages, {
+    spaceBetween: 20,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".work-images__next",
+      prevEl: ".work-images__prev",
+    },
+    thumbs: {
+      swiper: workSliderNav,
+    },
+  });
+}

@@ -1,0 +1,49 @@
+.project-goal {
+  padding: 30px 0 120px;
+  &__left {
+    grid-column: 6 span;
+    padding-top: 24px;
+  }
+  &__title {
+    margin-bottom: 41px;
+  }
+  &__description {
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--color-gray);
+    margin: 0;
+    margin-bottom: 27px;
+  }
+  &__right {
+    grid-column: 6 span;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.project-info {
+  width: 495px;
+  min-height: 316px;
+  border-radius: 4px;
+  padding: 25px 60px 40px;
+  box-shadow: var(--main-shadow);
+  background: var(--color-light);
+  &__item {
+    display: flex;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+  &__category {
+    width: 130px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    text-transform: uppercase;
+    color: var(--color-ebony);
+  }
+  &__value {
+    font-size: 16px;
+    line-height: 160%;
+    color: #787a80;
+  }
+}

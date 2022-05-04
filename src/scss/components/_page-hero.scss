@@ -17,6 +17,14 @@
     color: var(--color-ebony);
     margin: 0;
     margin-bottom: 24px;
+    &--small {
+      font-size: 64px;
+      line-height: 120%;
+      text-transform: initial;
+    }
+    &--mb {
+      margin-bottom: 60px;
+    }
   }
   &__description {
     max-width: 600px;
@@ -33,5 +41,10 @@
   }
   &--work {
     background-image: url("../img/work-hero-bg.png");
+  }
+  &--work-inner {
+    background-color: var(--color-light);
+    background-image: url("../img/work-inner-hero-bg.png");
+    background-position: right -8px top 48px;
   }
 }
