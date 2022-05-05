@@ -49,6 +49,9 @@
 @import "./components/post";
 @import "./components/post-comments";
 @import "./components/post-form";
+// Contacts
+@import "./components/contacts-form";
+@import "./components/contacts-info";
 // подключения маленьких компонентов страницы
 @import "./components/nav";
 @import "./components/header-contacts";
@@ -58,3 +61,4 @@
 @import "./components/learn-more";
 @import "./components/work-images";
 @import "./components/news-article";
+@import "./components/comment";
