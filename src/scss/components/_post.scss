@@ -1,0 +1,113 @@
+.post {
+  &__cover {
+    width: 100%;
+    object-fit: cover;
+    margin-top: -79px;
+  }
+  &__wrapper {
+    max-width: 840px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  &__content {
+    padding: 80px 0 60px;
+    * {
+      font-size: 16px;
+      line-height: 160%;
+      color: var(--color-gray);
+      margin-bottom: 28px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      color: var(--color-ebony);
+      margin: 0;
+      margin-bottom: 25px;
+    }
+    h3 {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 150%;
+      color: var(--color-ebony);
+      margin: 0;
+      margin-bottom: 25px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 160%;
+      color: var(--color-gray);
+      margin: 0;
+      margin-bottom: 28px;
+    }
+    blockquote {
+      position: relative;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      color: var(--color-ebony);
+      padding: 21px 58px;
+      padding-right: 5px;
+      margin: 0;
+      margin-bottom: 28px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 21px;
+        left: 0px;
+        width: 28px;
+        height: 20px;
+        background-image: url("../img/braces.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 28px;
+    }
+    li {
+      position: relative;
+      font-size: 16px;
+      line-height: 160%;
+      padding-left: 32px;
+      color: var(--color-gray);
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 16px;
+        height: 16px;
+        background-image: url("../img/decisions-check.svg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      &:not(:last-child) {
+        margin-bottom: 3px;
+      }
+    }
+  }
+  &__share {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-ebony);
+    span {
+      margin-right: 10px;
+    }
+    svg {
+      fill: var(--color-storm);
+      opacity: 1;
+    }
+  }
+}
