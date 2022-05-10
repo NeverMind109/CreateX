@@ -16,6 +16,17 @@
     font-size: 20px;
     line-height: 150%;
     color: var(--color-ebony);
+    transition: color 0.3s ease-in-out;
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid var(--color-primary);
+    }
+    &:hover {
+      color: var(--color-primary);
+    }
+    &:active {
+      color: var(--color-active);
+    }
   }
   &__meta {
     margin-bottom: 17px;
@@ -65,5 +76,17 @@
     background-position: left center;
     background-size: 16px 16px;
     background-repeat: no-repeat;
+  }
+}
+a.article-meta__item {
+  &:focus {
+    outline-offset: 2px;
+    outline: 2px solid var(--color-primary);
+  }
+  &:hover {
+    color: var(--color-primary);
+  }
+  &:active {
+    color: var(--color-active);
   }
 }

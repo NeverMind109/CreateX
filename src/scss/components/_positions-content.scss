@@ -66,6 +66,7 @@
     font-size: 14px;
     letter-spacing: 0.5px;
     padding: 11px 30px;
+    transition: color 0.3s ease-in-out;
   }
 }
 .positions-looking {
@@ -93,6 +94,7 @@
       padding-right: 44px;
       padding-left: 44px;
       margin-right: 22px;
+      transition: color 0.3s ease-in-out;
     }
     &--send {
       padding-right: 54px;

@@ -49,6 +49,10 @@
       line-height: 36px;
       letter-spacing: 0.5px;
       padding: 0 20px;
+      &:focus {
+        outline-offset: 2px;
+        outline: 2px solid var(--color-primary);
+      }
     }
     &:first-child {
       text-align: left;

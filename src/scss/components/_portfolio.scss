@@ -6,6 +6,7 @@
     line-height: 160%;
     color: var(--color-gray);
     margin-top: 60px;
+    transition: color 0.3s ease-in-out;
     svg {
       display: inline-flex;
       align-items: center;
@@ -15,6 +16,16 @@
       color: inherit;
       fill: currentColor;
       margin-right: 16px;
+    }
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid var(--color-primary);
+    }
+    &:hover {
+      color: var(--color-primary);
+    }
+    &:active {
+      color: var(--color-active);
     }
   }
 }
@@ -78,6 +89,19 @@
     }
     &__visible-more {
       display: block !important;
+    }
+  }
+}
+.portfolio-tabs-nav {
+  &__btn {
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid var(--color-primary);
+    }
+    &:hover {
+      .portfolio-tabs-nav__text {
+        color: var(--color-ebony);
+      }
     }
   }
 }

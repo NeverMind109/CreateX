@@ -17,9 +17,17 @@
       color: inherit;
       fill: currentColor;
     }
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid var(--color-primary);
+    }
     &:hover {
       color: var(--color-light);
       background-color: var(--color-primary);
+    }
+    &:active {
+      color: var(--color-light);
+      background-color: var(--color-active);
     }
   }
 }

@@ -61,6 +61,7 @@
     margin: 0;
   }
   .form-field__input {
+    height: 44px;
     width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 4px;
@@ -92,6 +93,17 @@
     }
     a {
       color: inherit;
+      transition: color 0.3s ease-in-out;
+      &:focus {
+        outline-offset: 2px;
+        outline: 2px solid var(--color-primary);
+      }
+      &:hover {
+        color: var(--color-light);
+      }
+      &:active {
+        color: var(--color-light);
+      }
     }
   }
   &__name {
@@ -115,5 +127,16 @@
     font-size: 16px;
     line-height: 160%;
     color: inherit;
+    transition: color 0.3s ease-in-out;
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid var(--color-primary);
+    }
+    &:hover {
+      color: var(--color-light);
+    }
+    &:active {
+      color: var(--color-light);
+    }
   }
 }

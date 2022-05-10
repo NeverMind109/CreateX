@@ -5,6 +5,7 @@
   border-radius: 4px;
   box-shadow: var(--main-shadow);
   background: var(--color-light);
+  transition: transform 0.3s ease-in-out;
   &__content {
     @include flex-column-center;
     padding: 16px 10px 23px;
@@ -24,7 +25,6 @@
     color: var(--color-storm);
   }
   &__btn {
-    display: none;
     border: 1px solid currentColor;
     border-radius: 4px;
     font-weight: 700;
@@ -34,5 +34,17 @@
     padding: 13px 31px;
     color: var(--color-primary);
     margin-top: 24px;
+    margin-bottom: -68px;
+    transition: 0.3s ease-in-out;
+    will-change: margin;
+  }
+  &:focus {
+    outline-offset: 2px;
+    outline: 2px solid var(--color-primary);
+  }
+  &:hover {
+    .portfolio-item__btn {
+      margin-bottom: 0;
+    }
   }
 }

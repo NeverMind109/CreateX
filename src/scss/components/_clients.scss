@@ -9,4 +9,10 @@
     grid-template-columns: repeat(6, 2fr);
     gap: 102px;
   }
+  &__link {
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid var(--color-primary);
+    }
+  }
 }
