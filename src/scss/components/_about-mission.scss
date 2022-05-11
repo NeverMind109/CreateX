@@ -6,6 +6,16 @@
     grid-template-columns: repeat(3, 1fr);
     --about-mission-gap: 94px;
     gap: calc(var(--about-mission-gap) * 2);
+
+    @include tablet {
+      --about-mission-gap: 30px;
+    }
+    @include minitablet {
+      --about-mission-gap: 10px;
+    }
+    @include mobile {
+      display: block;
+    }
   }
   &__item {
     position: relative;
@@ -26,6 +36,10 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+
+        @include mobile {
+          display: none;
+        }
       }
     }
     &--quality {
@@ -34,9 +48,14 @@
     &--safety {
       background-image: url("../img/safety.svg");
     }
-
     &--comfort {
       background-image: url("../img/comfort.svg");
+    }
+
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
     }
   }
   &__subtitle {

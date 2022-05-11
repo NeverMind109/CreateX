@@ -8,6 +8,10 @@
   &__container {
     display: flex;
     justify-content: flex-end;
+
+    @include minitablet {
+      justify-content: center;
+    }
   }
   &__form {
     background-color: var(--color-light);
@@ -44,5 +48,8 @@
     font-size: 14px;
     letter-spacing: 0.5px;
     padding: 12px 31px;
+  }
+  @include mobile {
+    padding: 15px;
   }
 }

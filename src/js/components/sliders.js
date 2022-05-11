@@ -40,7 +40,7 @@ const heroSlider = new Swiper(".hero-slider ", {
 
 if (portSlider) {
   const portfolioSlider = new Swiper(portSlider, {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: gap,
     on: {
       init: function () {
@@ -55,6 +55,14 @@ if (portSlider) {
     navigation: {
       nextEl: ".portfolio-section__next",
       prevEl: ".portfolio-section__prev",
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
     },
   });
 
@@ -103,7 +111,7 @@ const testimonialsSlider = new Swiper(".testimonials__items", {
 
 if (relatedSlider) {
   const relatedProjSlider = new Swiper(relatedSlider, {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: gap,
     on: {
       init: function () {
@@ -118,6 +126,14 @@ if (relatedSlider) {
     navigation: {
       nextEl: ".related-projects__next",
       prevEl: ".related-projects__prev",
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
     },
   });
 
@@ -158,9 +174,17 @@ const workImages = document.querySelector(".work-images-slider");
 if (workImages) {
   const workSliderNav = new Swiper(".work-images-nav", {
     spaceBetween: 20,
-    slidesPerView: 10,
+    slidesPerView: 3,
     freeMode: true,
     watchSlidesProgress: true,
+    breakpoints: {
+      576: {
+        slidesPerView: 6,
+      },
+      768: {
+        slidesPerView: 10,
+      },
+    },
   });
   const workSlides = new Swiper(workImages, {
     spaceBetween: 20,

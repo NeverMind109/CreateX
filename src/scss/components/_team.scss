@@ -13,11 +13,19 @@
         @include flex-h-center;
       }
     }
+
+    @include tablet {
+      grid-column: 6 span;
+    }
   }
   &__image {
     position: relative;
     font-size: 0;
     margin-bottom: 12px;
+
+    @include tablet {
+      text-align: center;
+    }
   }
   &__name {
     font-weight: 700;
@@ -35,7 +43,7 @@
   }
   &__socials {
     position: absolute;
-    bottom: 4px;
+    bottom: 0;
     left: 0;
     right: 0;
     display: none;
@@ -80,5 +88,9 @@
         color: var(--color-active);
       }
     }
+  }
+
+  @include minitablet {
+    padding: 50px 0;
   }
 }

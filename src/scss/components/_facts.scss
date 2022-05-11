@@ -17,6 +17,9 @@
   }
   &__title {
     margin-bottom: 62px;
+    @include mobile {
+      margin-bottom: 25px;
+    }
   }
   &__list {
     display: grid;
@@ -24,6 +27,17 @@
     gap: 48px;
     max-width: 736px;
     margin: 0 auto;
+
+    @include minitablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
+    }
+  }
+  @include mobile {
+    padding: 40px 0;
   }
 }
 .facts-element {
@@ -79,5 +93,9 @@
     font-size: 14px;
     line-height: 150%;
     color: var(--color-ebony);
+  }
+
+  @include minitablet {
+    @include flex-column-center;
   }
 }

@@ -20,17 +20,30 @@
       font-size: 16px;
       line-height: 160%;
     }
+    &--big {
+      width: 100%;
+      margin: 22px 0 44px;
+      .form-field__caption {
+        font-size: 16px;
+        line-height: 160%;
+        margin-bottom: 10px;
+      }
+      .form-field__input {
+        height: 100px;
+      }
+
+      @include mobile {
+        margin-top: 0;
+      }
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
-  &__field--big {
-    width: 100%;
-    margin: 22px 0 44px;
-    .form-field__caption {
-      font-size: 16px;
-      line-height: 160%;
-      margin-bottom: 10px;
-    }
-    .form-field__input {
-      height: 100px;
-    }
+
+  @include minitablet {
+    padding: 30px 0 50px;
   }
 }

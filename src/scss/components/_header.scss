@@ -2,6 +2,10 @@
   padding: 23px 0 21px;
   &__container {
     @include flex-v-center;
+
+    @include tablet {
+      justify-content: space-between;
+    }
   }
   &--main {
     background-color: var(--color-light);
@@ -14,11 +18,41 @@
   }
   &__nav {
     margin: 0 auto 0 60px;
+
+    @include tablet {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 1000;
+      overflow-y: auto;
+      display: block;
+      width: 80%;
+      height: 100vh;
+      padding: 50px;
+      margin: 0;
+      background-color: var(--color-light);
+      transform: translateX(-150%);
+      transition: transform 0.3s ease-in-out;
+
+      &--active {
+        transform: none;
+      }
+    }
+    @include mobile {
+      padding: 20px;
+    }
   }
 }
 .logo {
   &:focus {
     outline-offset: 2px;
     outline: 2px solid var(--color-primary);
+
+    @include minidesk {
+      max-width: 100px;
+    }
+    @include tablet {
+      max-width: none;
+    }
   }
 }

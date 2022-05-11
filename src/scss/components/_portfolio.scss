@@ -28,6 +28,10 @@
       color: var(--color-active);
     }
   }
+
+  @include mobile {
+    padding-bottom: 40px;
+  }
 }
 .portfolio-tabs-nav {
   @include flex-v-center;
@@ -38,6 +42,15 @@
     width: calc((100% - (var(--gap) * 4)) / 5);
     &:not(:last-child) {
       margin-right: var(--gap);
+    }
+
+    @include minitablet {
+      width: calc((100% - (var(--gap) * 2)) / 3);
+      margin-bottom: 20px;
+    }
+    @include mobile {
+      width: 100%;
+      margin-right: 0 !important;
     }
   }
   &__btn {
@@ -78,6 +91,13 @@
     color: #9a9ca5;
     transition: color 0.3s ease-in-out;
     pointer-events: none;
+  }
+
+  @include minitablet {
+    flex-wrap: wrap;
+    justify-content: center;
+    transform: none;
+    margin-top: 30px;
   }
 }
 .portfolio-tabs {

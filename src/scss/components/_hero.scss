@@ -9,6 +9,10 @@
     z-index: 10;
     background-color: var(--color-light);
     transform: translateY(-50%);
+
+    @include big-desktop {
+      display: none;
+    }
   }
   &__next {
     position: absolute;
@@ -17,6 +21,10 @@
     z-index: 10;
     background-color: var(--color-light);
     transform: translateY(-50%);
+
+    @include big-desktop {
+      display: none;
+    }
   }
   &__pag {
     counter-reset: pag;
@@ -44,6 +52,24 @@
       &:after {
         display: none;
       }
+
+      @include minitablet {
+        width: 25%;
+      }
+    }
+
+    @include big-desktop {
+      left: 3% !important;
+    }
+    @include minidesk {
+      left: 15px !important;
+    }
+    @include minitablet {
+      width: calc(100% - 30px) !important;
+      bottom: 50px !important;
+    }
+    @include mobile {
+      display: none;
     }
   }
   &__bar {
@@ -69,6 +95,11 @@
     .btn {
       &:not(:last-child) {
         margin-right: 20px;
+
+        @include mobile {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
       }
     }
   }
@@ -97,4 +128,11 @@
   background-size: cover;
   color: var(--color-light);
   padding: 220px 0 355px;
+
+  @include minitablet {
+    padding: 200px 0;
+  }
+  @include mobile {
+    padding: 100px 0;
+  }
 }

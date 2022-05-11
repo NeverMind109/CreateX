@@ -3,14 +3,42 @@
     <a class="logo" href="#">
       <img src="img/logo.svg" alt="Createx Logo" />
     </a>
-    <nav class="nav header__nav">
+    <nav class="nav header__nav" data-menu>
       <ul class="nav__list list-reset">
-        <li class="nav__item"><a class="nav__link" href="#">About Us</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">Services</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">Work</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">News</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">Contacts</a></li>
+        <li class="nav__item" data-menu-item>
+          <a class="nav__link" href="#">About Us</a>
+        </li>
+        <li class="nav__item" data-menu-item>
+          <a class="nav__link" href="#">Services</a>
+        </li>
+        <li class="nav__item" data-menu-item>
+          <a class="nav__link" href="#">Work</a>
+        </li>
+        <li class="nav__item" data-menu-item>
+          <a class="nav__link" href="#">News</a>
+        </li>
+        <li class="nav__item" data-menu-item>
+          <a class="nav__link" href="#">Contacts</a>
+        </li>
       </ul>
+      <div class="header-contacts header-contacts--nav">
+        <a
+          href="tel:4055550128"
+          class="header-contacts__link contacts-link contacts-link--call"
+          data-menu-item
+        >
+          <span class="contacts-link__caption">Call us</span>
+          <span class="contacts-link__value">(405) 555-0128</span>
+        </a>
+        <a
+          href="mailto:hello@createx.com"
+          class="header-contacts__link contacts-link contacts-link--mail"
+          data-menu-item
+        >
+          <span class="contacts-link__caption">Talk to us</span>
+          <span class="contacts-link__value">hello@createx.com</span>
+        </a>
+      </div>
     </nav>
     <div class="header-contacts">
       <a
@@ -28,5 +56,13 @@
         <span class="contacts-link__value">hello@createx.com</span>
       </a>
     </div>
+    <button
+      class="burger"
+      aria-label="Открыть меню"
+      aria-expanded="false"
+      data-burger
+    >
+      <span class="burger__line"></span>
+    </button>
   </div>
 </header>

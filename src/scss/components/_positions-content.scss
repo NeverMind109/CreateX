@@ -1,5 +1,10 @@
 .positions-content {
   padding: 120px 0 175px;
+  &__info {
+    @include minitablet {
+      display: block;
+    }
+  }
   &__left {
     grid-column: 7 span;
   }
@@ -7,6 +12,18 @@
     grid-column: 5 span;
     display: flex;
     justify-content: flex-end;
+
+    @include minitablet {
+      justify-content: center;
+      margin-top: 30px;
+    }
+  }
+
+  @include minitablet {
+    padding: 100px 0;
+  }
+  @include mobile {
+    padding: 50px 0;
   }
 }
 .positions-list {
@@ -54,6 +71,11 @@
     background-position: left center;
     background-size: 16px 16px;
   }
+  &__left {
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
   &__title {
     font-weight: 700;
     font-size: 20px;
@@ -67,6 +89,14 @@
     letter-spacing: 0.5px;
     padding: 11px 30px;
     transition: color 0.3s ease-in-out;
+  }
+
+  @include tablet {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  @include mobile {
+    padding: 10px 15px;
   }
 }
 .positions-looking {
@@ -88,6 +118,10 @@
   }
   &__btns {
     display: flex;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
   &__btn {
     &--subs {
@@ -95,6 +129,11 @@
       padding-left: 44px;
       margin-right: 22px;
       transition: color 0.3s ease-in-out;
+
+      @include tablet {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
     }
     &--send {
       padding-right: 54px;

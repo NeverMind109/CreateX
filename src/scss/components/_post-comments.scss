@@ -8,4 +8,8 @@
       margin-bottom: 58px;
     }
   }
+
+  @include minitablet {
+    padding: 40px 0 40px;
+  }
 }

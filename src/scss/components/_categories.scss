@@ -3,12 +3,26 @@
   &__title {
     margin-bottom: 39px;
   }
+
+  @include minitablet {
+    padding: 100px 0;
+  }
+  @include mobile {
+    padding: 50px 0;
+  }
 }
 .categories-nav {
   @include flex-v-center;
   margin-bottom: 60px;
   &__item {
     width: calc(100% / 6);
+
+    @include tablet {
+      width: calc(100% / 3);
+    }
+    @include mobile {
+      width: 100%;
+    }
   }
   &__btn {
     width: 100%;
@@ -36,6 +50,10 @@
       color: var(--color-primary);
       border-color: currentColor;
     }
+  }
+
+  @include tablet {
+    flex-wrap: wrap;
   }
 }
 .categories-list {

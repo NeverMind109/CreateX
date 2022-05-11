@@ -4,16 +4,37 @@
   color: rgba(255, 255, 255, 0.6);
   &__left {
     grid-column: 7 span;
+
+    @include minitablet {
+      grid-column: 12 span;
+    }
+    @include mobile {
+      grid-column: 4 span;
+    }
   }
   &__logo {
     margin-right: 60px;
+
+    @include mobile {
+      display: inline-block;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
   &__top {
     @include flex-v-center;
     margin-bottom: 22px;
+
+    @include mobile {
+      display: block;
+    }
   }
   &__form {
     grid-column: 5 span;
+
+    @include mobile {
+      grid-column: 4 span;
+    }
   }
   &__description {
     width: 100%;
@@ -27,6 +48,10 @@
   }
   &__nav {
     grid-column: 8 span;
+
+    @include mobile {
+      grid-column: 4 span;
+    }
   }
   &__copyright {
     grid-column: 12 span;
@@ -40,6 +65,11 @@
       background-repeat: no-repeat;
       background-position: 2px center;
       background-size: 16px 16px;
+    }
+
+    @include mobile {
+      grid-column: 4 span;
+      text-align: center;
     }
   }
 }
@@ -80,6 +110,13 @@
     line-height: 150%;
     margin: 0;
   }
+
+  @include minitablet {
+    grid-column: 12 span;
+  }
+  @include mobile {
+    grid-column: 4 span;
+  }
 }
 .footer-adress {
   padding-top: 20px;
@@ -116,6 +153,13 @@
   &__col {
     &:not(:last-child) {
       margin-right: 125px;
+
+      @include minitablet {
+        margin-right: 65px;
+      }
+      @include mobile {
+        margin-right: 35px;
+      }
     }
   }
   &__item {
@@ -138,5 +182,11 @@
     &:active {
       color: var(--color-light);
     }
+  }
+  @include minitablet {
+    padding-left: 24px;
+  }
+  @include mobile {
+    padding-left: 0;
   }
 }

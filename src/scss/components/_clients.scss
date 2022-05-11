@@ -8,11 +8,26 @@
     display: grid;
     grid-template-columns: repeat(6, 2fr);
     gap: 102px;
+
+    @include minidesk {
+      column-gap: 30px;
+    }
+  }
+  &__item {
+    @include minidesk {
+      display: flex;
+      justify-content: center;
+      grid-column: 3 span;
+    }
   }
   &__link {
     &:focus {
       outline-offset: 2px;
       outline: 2px solid var(--color-primary);
     }
+  }
+
+  @include minitablet {
+    padding: 50px 0;
   }
 }

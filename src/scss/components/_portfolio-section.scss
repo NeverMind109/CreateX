@@ -6,14 +6,33 @@
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 48px;
+
+    @include mobile {
+      display: block;
+    }
   }
   &__slider-nav {
     transform: translateX(12px);
+    @include mobile {
+      transform: none;
+    }
   }
   &__title {
     max-width: 710px;
     padding-bottom: 12px;
     margin: 0;
+
+    @include tablet {
+      font-size: 40px;
+      line-height: 55px;
+    }
+    @include mobile {
+      max-width: none;
+      font-size: 28px;
+      line-height: 40px;
+      padding-bottom: 0;
+      margin-bottom: 15px;
+    }
   }
   &__items {
     padding: 100px;
@@ -30,5 +49,9 @@
   }
   &__learn {
     padding-top: 82px;
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }

@@ -6,9 +6,17 @@
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 48px;
+
+    @include mobile {
+      display: block;
+      margin-bottom: 25px;
+    }
   }
   &__slider-nav {
     transform: translateX(12px);
+    @include mobile {
+      transform: none;
+    }
   }
   &__title {
     max-width: 710px;
@@ -27,8 +35,21 @@
       opacity: 1;
       visibility: visible;
     }
+    .portfolio-item__title {
+      @include tablet {
+        text-align: center;
+        min-height: 52px;
+      }
+    }
   }
   &__learn {
     padding-top: 82px;
+  }
+
+  @include minitablet {
+    padding: 100px 0;
+  }
+  @include mobile {
+    padding: 50px 0;
   }
 }

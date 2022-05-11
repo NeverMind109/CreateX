@@ -17,6 +17,10 @@
     color: var(--color-ebony);
     margin: 0;
     margin-bottom: 5px;
+
+    @include minidesk {
+      font-size: 18px;
+    }
   }
   &__description {
     display: inline-block;
@@ -37,6 +41,10 @@
     margin-bottom: -68px;
     transition: 0.3s ease-in-out;
     will-change: margin;
+
+    @include minitablet {
+      margin-bottom: 0;
+    }
   }
   &:focus {
     outline-offset: 2px;

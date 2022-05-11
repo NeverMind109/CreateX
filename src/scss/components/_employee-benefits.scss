@@ -7,6 +7,16 @@
     --mission-gap: 94px;
     gap: calc(var(--mission-gap) * 2);
     margin-bottom: 27px;
+
+    @include tablet {
+      --mission-gap: 30px;
+    }
+    @include minitablet {
+      --mission-gap: 10px;
+    }
+    @include mobile {
+      display: block;
+    }
   }
   &__item {
     position: relative;
@@ -27,18 +37,26 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+
+        @include mobile {
+          display: none;
+        }
       }
     }
     &--training {
       background-image: url("../img/brain.svg");
     }
-
     &--growth {
       background-image: url("../img/success.svg");
     }
-
     &--salary {
       background-image: url("../img/budget.svg");
+    }
+
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
     }
   }
   &__subtitle {
@@ -54,5 +72,12 @@
     line-height: 160%;
     color: var(--color-storm);
     margin: 0;
+  }
+
+  @include minitablet {
+    padding-bottom: 100px;
+  }
+  @include mobile {
+    padding-bottom: 30px;
   }
 }

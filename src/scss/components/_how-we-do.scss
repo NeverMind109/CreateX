@@ -3,6 +3,11 @@
   background-image: var(--color-light);
   &__title {
     margin-bottom: 60px;
+
+    @include minitablet {
+      text-align: center;
+      margin-bottom: 30px;
+    }
   }
   &__list {
     counter-reset: section;
@@ -33,7 +38,18 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+
+        @include tablet {
+          display: none;
+        }
       }
+    }
+
+    @include tablet {
+      grid-column: 6 span;
+    }
+    @include minitablet {
+      text-align: center;
     }
   }
   &__subtitle {
@@ -49,5 +65,12 @@
     line-height: 160%;
     color: var(--color-storm);
     margin: 0;
+  }
+
+  @include minitablet {
+    padding: 30px 0 100px;
+  }
+  @include mobile {
+    padding: 30px 0 50px;
   }
 }

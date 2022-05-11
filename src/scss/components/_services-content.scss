@@ -23,6 +23,13 @@
     align-items: center;
     &:not(:last-child) {
       margin-bottom: 118px;
+
+      @include minitablet {
+        margin-bottom: 75px;
+      }
+      @include mobile {
+        margin-bottom: 30px;
+      }
     }
     &--reverse {
       .services__image {
@@ -32,6 +39,10 @@
       .services__info {
         order: -1;
         padding-left: 0;
+
+        @include mobile {
+          order: initial;
+        }
       }
     }
   }
@@ -43,6 +54,11 @@
     grid-column: 6 span;
     padding: 20px 0;
     padding-left: 40px;
+
+    @include mobile {
+      text-align: center;
+      padding: 0;
+    }
   }
   &__title {
     font-weight: 700;
@@ -62,5 +78,12 @@
   &__link {
     letter-spacing: normal;
     padding: 11px 27px;
+  }
+
+  @include minitablet {
+    padding: 100px 0;
+  }
+  @include mobile {
+    padding: 50px 0;
   }
 }

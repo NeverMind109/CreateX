@@ -15,6 +15,17 @@
     --mission-gap: 94px;
     gap: calc(var(--mission-gap) * 2);
     margin-bottom: 101px;
+
+    @include tablet {
+      --mission-gap: 30px;
+    }
+    @include minitablet {
+      --mission-gap: 10px;
+      margin-bottom: 50px;
+    }
+    @include mobile {
+      display: block;
+    }
   }
   &__item {
     position: relative;
@@ -35,6 +46,10 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+
+        @include mobile {
+          display: none;
+        }
       }
     }
     &--terms {
@@ -45,6 +60,11 @@
     }
     &--control {
       background-image: url("../img/control.svg");
+    }
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
     }
   }
   &__subtitle {
@@ -66,5 +86,9 @@
   }
   &__btn {
     width: 390px;
+
+    @include mobile {
+      width: 90%;
+    }
   }
 }

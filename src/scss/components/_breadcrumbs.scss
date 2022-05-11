@@ -13,6 +13,9 @@
         line-height: 150%;
         color: #9a9ca5;
       }
+      @include mobile {
+        margin-right: 20px;
+      }
     }
   }
   &__link {
@@ -33,5 +36,8 @@
     &:active {
       color: var(--color-active);
     }
+  }
+  @include minitablet {
+    flex-wrap: wrap;
   }
 }

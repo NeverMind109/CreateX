@@ -7,6 +7,15 @@
     --contacts-gap: 120px;
     gap: calc(var(--contacts-gap) * 2);
     margin-bottom: 96px;
+
+    @include minidesk {
+      --contacts-gap: 40px;
+    }
+    @include minitablet {
+      display: block;
+      text-align: center;
+      margin-bottom: 50px;
+    }
   }
   &__item {
     position: relative;
@@ -22,6 +31,10 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+      }
+
+      @include minitablet {
+        margin-bottom: 30px;
       }
     }
   }
@@ -94,6 +107,9 @@
         }
       }
     }
+  }
+  @include minitablet {
+    padding: 50px 0;
   }
 }
 .contacts-info__value {

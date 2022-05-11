@@ -6,6 +6,13 @@
   background-position: right bottom -300px;
   &__list {
     margin-bottom: 260px;
+
+    @include minitablet {
+      margin-bottom: 100px;
+    }
+    @include mobile {
+      margin-bottom: 50px;
+    }
   }
   &__item {
     grid-column: 3 span;
@@ -26,6 +33,19 @@
     &--finish {
       background-image: url("../img/pantone.svg");
     }
+
+    @include tablet {
+      grid-column: 6 span;
+    }
+  }
+  &__image {
+    @include minidesk {
+      max-width: 45%;
+    }
+    @include tablet {
+      max-width: none;
+      width: 100%;
+    }
   }
   &__value {
     font-weight: 700;
@@ -33,6 +53,11 @@
     line-height: 130%;
     color: var(--color-primary);
     margin-bottom: 10px;
+
+    @include minidesk {
+      font-size: 36px;
+      line-height: 46px;
+    }
   }
   &__text {
     font-size: 14px;
@@ -43,6 +68,11 @@
   &__content {
     display: flex;
     align-items: flex-start;
+
+    @include tablet {
+      display: block;
+      text-align: center;
+    }
   }
   &__info {
     position: relative;
@@ -57,6 +87,24 @@
     padding-bottom: 60px;
     box-shadow: var(--main-shadow);
     background: var(--color-light);
+
+    @include minidesk {
+      width: 55%;
+      left: 0;
+      top: 0;
+    }
+    @include tablet {
+      width: 100%;
+      padding: 40px;
+      margin: 0 auto;
+    }
+    @include mobile {
+      padding: 0;
+    }
+  }
+
+  @include minitablet {
+    padding: 60px 0;
   }
 }
 .quote {
@@ -77,6 +125,10 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
+
+      @include mobile {
+        left: 0;
+      }
     }
     p {
       font-weight: 700;
@@ -88,16 +140,25 @@
         margin-bottom: 30px;
       }
     }
+
+    @include mobile {
+      padding: 30px 10px 0;
+    }
   }
   &__footer {
     font-size: 14px;
     line-height: 150%;
     color: var(--color-storm);
     padding: 20px 53px;
-    background-image: url("../../img/signature.svg");
+    background-image: url("../img/signature.svg");
     background-size: 100px 68px;
     background-position: right 65px center;
     background-repeat: no-repeat;
+
+    @include mobile {
+      padding-bottom: 120px;
+      background-position: bottom 30px center;
+    }
   }
   &__author {
     display: block;

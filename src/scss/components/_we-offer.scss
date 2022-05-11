@@ -1,6 +1,11 @@
 .we-offer {
   padding: 120px 0;
   background-color: var(--color-light);
+  &__container {
+    @include tablet {
+      display: block;
+    }
+  }
   &__image {
     grid-column: 7 span;
   }
@@ -8,6 +13,10 @@
     grid-column: 5 span;
     padding-left: 75px;
     padding-top: 5px;
+    @include tablet {
+      padding: 0;
+      padding-top: 30px;
+    }
   }
   &__title {
     font-family: "Lato", sans-serif;
@@ -16,6 +25,13 @@
     font-size: 46px;
     line-height: 130%;
     margin-bottom: 55px;
+
+    @include mobile {
+      font-size: 28px;
+      line-height: 40px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
   }
   &__accordion {
     &:not(:last-of-type) {
@@ -36,6 +52,11 @@
         font-size: 28px;
         line-height: 150%;
         color: var(--color-ebony);
+
+        @include mobile {
+          font-size: 20px;
+          line-height: 30px;
+        }
       }
       &__icon {
         position: absolute;
@@ -84,5 +105,12 @@
     &::after {
       opacity: 0;
     }
+  }
+
+  @include minitablet {
+    padding: 100px 0;
+  }
+  @include mobile {
+    padding: 50px 0 30px;
   }
 }
